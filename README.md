@@ -1,3 +1,3 @@
 # VanClan
 
-A collection of recepies from Friday night family time.
+A collection of recipes  from Friday night family time.
