@@ -39,10 +39,10 @@ export default function SinglePost() {
 
   return (
     <main className='bg-gray-200 min-h-screen p-4'>
-      <article className='container shadow-lg mx-auto bg-white rounded-lg'>
+      <article className='md:container md:mx-auto bg-white rounded-lg'>
         <header className='relative'>
-          <div className='absolute h-full w-full flex items-center justify-center p-8'>
-            <div className='bg-white bg-opacity-75 rounded p-12'>
+          <div className='absolute h-full w-full flex items-center justify-center'>
+            <div className='bg-white bg-opacity-75 rounded p-8'>
               <h1 className='text-2xl lg:text-6xl mb-4'>{singlePost.title}</h1>
               <div className='flex justify-center text-gray-800'>
                 <img
@@ -63,7 +63,7 @@ export default function SinglePost() {
             style={{ height: "400px" }}
           />
         </header>
-        <div className='px-16 lg:px-48 lg:py-20 prose lg:prose-xl max-w-full'>
+        <div className='px-4 lg:px-6 py-4 lg:py-8 prose prose-sm sm:prose lg:prose-lg xl:prose-xl mx-auto'>
           <BlockContent
             blocks={singlePost.body}
             projectId='y7iq2wpp'
