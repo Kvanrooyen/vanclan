@@ -23,9 +23,9 @@ export default function Post() {
       .catch(console.error);
   }, []);
   return (
-    <main className='bg-gray-200 min-h-screen p-12'>
+    <main className='min-h-screen p-12'>
       <section className='container mx-auto'>
-        <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-8'>
           {postData &&
             postData.map((post, index) => (
               <article>
@@ -40,7 +40,7 @@ export default function Post() {
                       className='w-full h-full roundeed-r object-cover absolute'
                     />
                     <span className='block relative h-full flex jsutify-end items-end pr-4 pb-4'>
-                      <h3 className='text-gray-800 textlg font-blog [x-3 py-4 bg-white rounded'>
+                      <h3 className='text-gray-800 textlg font-blog px-3 py-3 bg-white rounded'>
                         {post.title}
                       </h3>
                     </span>

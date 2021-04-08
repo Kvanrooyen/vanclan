@@ -38,8 +38,8 @@ export default function SinglePost() {
   if (!singlePost) return <div>Loading...</div>;
 
   return (
-    <main className='bg-gray-200 min-h-screen p-4'>
-      <article className='md:container md:mx-auto bg-white rounded-lg'>
+    <main className='min-h-screen p-4'>
+      <article className='md:container md:mx-auto bg-gray-100 rounded-lg'>
         <header className='relative'>
           <div className='absolute h-full w-full flex items-center justify-center'>
             <div className='bg-white bg-opacity-75 rounded p-8'>
