@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import sanityClient from "../client.js";
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react";
+import moment from "moment";
 
 const builder = imageUrlBuilder(sanityClient);
 function urlFor(source) {
@@ -20,6 +21,7 @@ export default function SinglePost() {
         title,
         _id,
         slug,
+        publishedAt,
         mainImage{
           asset->{
             _id,
@@ -51,7 +53,9 @@ export default function SinglePost() {
                   className='w-10 h-10 rounded-full'
                 />
                 <p className='flex items-center pl-2 text-xl '>
-                  {singlePost.name}
+                  {singlePost.name +
+                    " | " +
+                    moment(singlePost.publishedAt).format("DD MMMM YYYY")}
                 </p>
               </div>
             </div>
