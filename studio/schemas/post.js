@@ -34,7 +34,7 @@ export default {
     {
       name: "publishedAt",
       title: "Published at",
-      type: "datetime",
+      type: "date",
     },
     {
       name: "body",
