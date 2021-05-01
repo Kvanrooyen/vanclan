@@ -9,9 +9,15 @@ export default function NavBar() {
           <NavLink
             to='/'
             exact
-            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest'
+            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest px-4'
           >
-            Recipes
+            Dinner
+          </NavLink>
+          <NavLink
+            to='/dessert'
+            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest px-4'
+          >
+            Dessert
           </NavLink>
         </nav>
       </div>
