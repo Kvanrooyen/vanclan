@@ -1,26 +1,22 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 export default function NavBar() {
   return (
-    <header>
-      <div className='container mx-auto flex justify-between'>
-        <nav className='flex mx-auto'>
-          <NavLink
-            to='/'
-            exact
-            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest px-4'
-          >
+    <Navbar bg='dark' variant='dark' expand='lg'>
+      <Navbar.Brand>VanClan</Navbar.Brand>
+      <Navbar.Toggle aria-controls='basic-navbar-nav' />
+      <Navbar.Collapse id='basic-navbar-nav'>
+        <Nav className='mr-auto'>
+          <Nav.Link href='/' className='text-white'>
             Dinner
-          </NavLink>
-          <NavLink
-            to='/dessert'
-            className='inflex-flex items-center text-black text-4xl font-bold tracking-wideest px-4'
-          >
-            Dessert
-          </NavLink>
-        </nav>
-      </div>
-    </header>
+          </Nav.Link>
+          <Nav.Link href='/dessert' className='text-white'>
+            Desserts
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }
