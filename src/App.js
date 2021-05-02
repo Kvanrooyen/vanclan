@@ -10,8 +10,8 @@ function App() {
       <NavBar />
       <Switch>
         <Route component={SinglePost} path='/recipe/:slug' />
-        <Route component={Dinner} path='/' exact />
         <Route component={Dessert} path='/dessert' />
+        <Route component={Dinner} path='/' exact />
       </Switch>
     </BrowserRouter>
   );
