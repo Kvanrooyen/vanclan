@@ -23,18 +23,18 @@ export default function Dessert() {
       .catch(console.error);
   }, []);
   return (
-    <main className='min-h-screen p-12'>
+    <main className='min-h-screen pt-4'>
       <section className='container mx-auto'>
-        <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-8'>
+        <div className='grid md:grid-cols-3 lg:grid-cols-4 gap-6'>
           {dessertData &&
             dessertData.map((dessert, index) => (
               <article>
                 <Link
-                  to={"/post/" + dessert.slug.current}
+                  to={"/recipe/" + dessert.slug.current}
                   key={dessert.slug.current}
                 >
                   <span
-                    className='block h-64 relative rounded shadow leading-snug bg-white border-l-8 border-green-400'
+                    className='block h-64 relative shadow leading-snug'
                     key={index}
                   >
                     <img
@@ -42,10 +42,10 @@ export default function Dessert() {
                       alt={dessert.mainImage.alt}
                       className='w-full h-full roundeed-r object-cover absolute'
                     />
-                    <span className='block relative h-full flex jsutify-end items-end pr-4 pb-4'>
-                      <h3 className='text-gray-800 textlg font-blog px-3 py-3 bg-white rounded'>
+                    <span className='block relative h-full w-full flex justify-end items-end'>
+                      <p className='text-gray-800 font-blog px-1 py-1 mt-8 bg-white rounded text-center	w-full'>
                         {dessert.title}
-                      </h3>
+                      </p>
                     </span>
                   </span>
                 </Link>
