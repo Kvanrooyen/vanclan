@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SinglePost from "./components/SinglePost";
-import Post from "./components/Post";
+import Dinner from "./components/Dinner";
 import NavBar from "./components/NavBar";
 import Dessert from "./components/Dessert";
 
@@ -9,8 +9,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
-        <Route component={SinglePost} path='/post/:slug' />
-        <Route component={Post} path='/' exact />
+        <Route component={SinglePost} path='/recipe/:slug' />
+        <Route component={Dinner} path='/' exact />
         <Route component={Dessert} path='/dessert' />
       </Switch>
     </BrowserRouter>
