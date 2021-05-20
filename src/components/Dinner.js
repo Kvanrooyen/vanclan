@@ -49,13 +49,13 @@ export default function Dinner() {
                     <span className='block relative h-full w-full flex justify-end items-end'>
                       <p className='text-gray-800 font-blog px-1 py-1 mt-8 bg-white rounded text-center	w-full'>
                         <ReactCountryFlag
-                          countryCode='US'
+                          countryCode={dinner.ctry}
                           svg
                           style={{
                             width: "1em",
                             height: "1em",
                           }}
-                          title='US'
+                          title={dinner.ctry}
                         />
                         {" " + dinner.title}
                       </p>
