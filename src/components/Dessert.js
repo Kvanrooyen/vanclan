@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client";
+import ReactCountryFlag from "react-country-flag";
 
 export default function Dessert() {
   const [dessertData, setDessert] = useState(null);
@@ -16,7 +17,9 @@ export default function Dessert() {
                     url
                 },
                 alt
-            }
+              },
+              publishedAt,
+              ctry
         }`
       )
       .then((data) => setDessert(data))
@@ -44,7 +47,16 @@ export default function Dessert() {
                     />
                     <span className='block relative h-full w-full flex justify-end items-end'>
                       <p className='text-gray-800 font-blog px-1 py-1 mt-8 bg-white rounded text-center	w-full'>
-                        {dessert.title}
+                        <ReactCountryFlag
+                          countryCode={dessert.ctry}
+                          svg
+                          style={{
+                            width: "1em",
+                            height: "1em",
+                          }}
+                          title={dessert.ctry}
+                        />
+                        {" " + dessert.title}
                       </p>
                     </span>
                   </span>

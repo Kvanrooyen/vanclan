@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import sanityClient from "../client";
+import ReactCountryFlag from "react-country-flag";
 
 export default function Dinner() {
   const [dinnerData, setDinner] = useState(null);
@@ -17,12 +18,14 @@ export default function Dinner() {
                 },
                 alt
             },
-            publishedAt
+            publishedAt,
+            ctry
         }`
       )
       .then((data) => setDinner(data))
       .catch(console.error);
   }, []);
+
   return (
     <main className='min-h-screen pt-4'>
       <section className='container mx-auto'>
@@ -45,7 +48,16 @@ export default function Dinner() {
                     />
                     <span className='block relative h-full w-full flex justify-end items-end'>
                       <p className='text-gray-800 font-blog px-1 py-1 mt-8 bg-white rounded text-center	w-full'>
-                        {dinner.title}
+                        <ReactCountryFlag
+                          countryCode={dinner.ctry}
+                          svg
+                          style={{
+                            width: "1em",
+                            height: "1em",
+                          }}
+                          title={dinner.ctry}
+                        />
+                        {" " + dinner.title}
                       </p>
                     </span>
                   </span>

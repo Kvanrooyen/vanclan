@@ -41,6 +41,11 @@ export default {
       title: "Body",
       type: "blockContent",
     },
+    {
+      name: "ctry",
+      title: "Country Code",
+      type: "string",
+    },
   ],
 
   preview: {
