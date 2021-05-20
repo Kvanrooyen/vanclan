@@ -16,7 +16,8 @@ export default function Dessert() {
                     _id,
                     url
                 },
-                alt
+                alt,
+                ctry
             }
         }`
       )

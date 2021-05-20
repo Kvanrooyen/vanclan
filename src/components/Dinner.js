@@ -18,7 +18,8 @@ export default function Dinner() {
                 },
                 alt
             },
-            publishedAt
+            publishedAt,
+            ctry
         }`
       )
       .then((data) => setDinner(data))
